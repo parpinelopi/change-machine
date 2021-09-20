@@ -12,7 +12,7 @@ public class ChangeMachine {
 
 
         for (int i = 0; arrLength > i; i++)
-            for (int j = coins.get(i); j < arrLength; j++)
+            for (int j = coins.get(i); j <= money; j++)
                 count[j] += count[j - coins.get(i)];
         return count[money];
     }
@@ -21,7 +21,7 @@ public class ChangeMachine {
 
         Integer arr[] = {1, 2, 3};
         Integer arrLength = arr.length;
-        Integer money = 15;
+        Integer money = 29;
         System.out.println(countChange(money, Arrays.asList(arr), arrLength));
 
 
